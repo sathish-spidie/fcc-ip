@@ -26,7 +26,9 @@ app.get("/api/hello", function (req, res) {
 
 
 app.get('/api/whoami',(req,res)=>{
-  console.log(req)
+  var reqip = req.ip
+  conso
+    res.json({"ipaddress":req.ip.substring(7,20),"language":req.headers["accept-language"],"software":req.headers["user-agent"]})
 })
 
 
